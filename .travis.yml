@@ -24,6 +24,7 @@ install:
 
 script:
   - cd "${PYTHON_PACKAGE_SRC}"
+  - ls -l /dev
   - sudo pip install --upgrade --no-compile --force-reinstall --ignore-installed --no-cache-dir .
   - sudo python setup.py test
 

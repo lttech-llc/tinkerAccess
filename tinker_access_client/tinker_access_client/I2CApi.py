@@ -42,7 +42,7 @@ class i2c_device:
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        self.bus.close()
+        pass
 
     # Write a single command to the i2c bus
     def write_cmd(self, cmd):

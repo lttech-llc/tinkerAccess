@@ -55,9 +55,9 @@ class GPIO(object):
     BCM = 11
     IN = 0
     OUT = 1
+    PUD_OFF = 0
     PUD_DOWN = 1
     PUD_UP = 2
-    PUD_OFF = 3
 
     RISING = True
 

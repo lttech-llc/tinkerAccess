@@ -57,6 +57,7 @@ class GPIO(object):
     OUT = 1
     PUD_DOWN = 1
     PUD_UP = 2
+    PUD_OFF = 3
 
     RISING = True
 

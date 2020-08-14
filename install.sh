@@ -9,7 +9,6 @@ dir="/opt/tinkeraccess"
 
 apt update
 apt install python-pip
-pip install --upgrade  setuptools pip
 pip install flask
 
 if [ ! -f /usr/bin/sqlite3 ] ; then

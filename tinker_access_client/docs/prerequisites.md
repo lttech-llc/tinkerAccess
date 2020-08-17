@@ -1,5 +1,5 @@
 # Prerequisites:
-1. Build the custom [Raspberry Pi HAT](https://www.raspberrypi.org/blog/introducing-raspberry-pi-hats/) as described [here](../../docs/tinkerAccess.fzz).
+1. Build the custom tinkerAccess [Raspberry Pi HAT](https://www.raspberrypi.org/blog/introducing-raspberry-pi-hats/) as described [here](/Hardware/).
 
 1. Create a [Raspbian OS](https://www.raspberrypi.org/downloads/raspbian/) boot image as described [here](docs/bootimage.md).
 

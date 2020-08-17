@@ -1,10 +1,10 @@
 # tinker-access-client
 
-The tinker-access-client is the client piece of the tinkerAccess system, a [Raspberry Pi](https://www.raspberrypi.org/products/) based access control system that can be used to prevent unauthorized users from using devices that require special training, it could also conceivable be used to control electronic lock boxes, or doors.
+The tinker-access-client is the client piece of the tinkerAccess system, a [Raspberry Pi](https://www.raspberrypi.org/products/) based access control system that can be used to prevent unauthorized users from using devices that require special training. It could also conceivably be used to control electronic lock boxes or doors.
 
 The system was originally designed and created by [Matt Stallard](https://github.com/mstallard), [Ron Thomas](https://github.com/RonaldThomas), and [Matt Peopping](https://github.com/analogpixel) for [TinkerMill](http://www.tinkermill.org) a makerspace in [Longmont, CO](https://www.google.com/maps/place/Longmont,+CO/@40.1679379,-105.1678944,12z/data=!3m1!4b1!4m5!3m4!1s0x876bf908d5cc3349:0xc17da1eef3a32735!8m2!3d40.1672068!4d-105.1019275). It is continually being maintained and enhanced by other contributors in the community.
 
-The client software is a [Python 2.7](https://www.python.org/download/releases/2.7/) service designed to run on the [Raspbian OS](https://www.raspberrypi.org/downloads/raspbian/). The service is responsible for coordinating activity between the RPi's peripherals (i.e. RFID reader, LCD, etc..) and the GPIO, as well as communicating with the [tinker-access-server](../tinker_access_server/README.md) for activity logging, authentication & authorization.
+The client software is a [Python 2.7](https://www.python.org/download/releases/2.7/) service designed to run on the [Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspberry-pi-os/). The service is responsible for coordinating activity between the RPi's peripherals (i.e. RFID reader, LCD, etc.) and the GPIO, as well as communicating with the [tinker-access-server](/tinker_access_server/README.md) for activity logging, authentication, and authorization.
 
 Official releases of the client software are packaged and published to [PyPI - the Python Package Index ](https://pypi.python.org/pypi/tinker-access-client/)  
 
@@ -15,10 +15,10 @@ You will need to complete these [prerequisites](docs/prerequisites.md) before in
 
 By default, the tinker-access-client is installed as a service that starts immediately, as well as upon reboot of the device.
 
-Use the following command to the latest version of the client:
+Use the following command to get the latest version of the client:
 
 ```commandline
-sudo pip install --upgrade --force-reinstall --ignore-installed --no-cache-dir tinker-access-client
+sudo pip install --upgrade --force-reinstall --ignore-installed --no-cache-dir tinker-access-client --no-binary tinker-access-client
 ```
 
 

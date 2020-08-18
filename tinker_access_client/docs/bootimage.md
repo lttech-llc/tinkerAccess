@@ -8,7 +8,7 @@ The intent of this guide is to document a few additional steps that will facilit
 
 1. Download the [Raspberry Pi OS image](https://www.raspberrypi.org/downloads/raspberry-pi-os/).
 
-   The "Raspberry Pi OS (32-bit) with desktop" is the typical desired image. It is a somewhat light-weight image in that it does not include all of the recommended software of a full install, but it still includes the desktop.
+   The "Raspberry Pi OS (32-bit) with desktop" is the typical desired image. It is a somewhat light-weight image, in that it does not include all of the recommended software of a full install, but it still includes the desktop.
 
 2. Write the image to an SD card.
 
@@ -55,10 +55,10 @@ The intent of this guide is to document a few additional steps that will facilit
 
 7. Enable the VNC server to facilitate completion of the install via the desktop on a VNC client running locally.
 
-   From your local machine, ssh into the Raspberry Pi. Use the actual IP address assigned to the Pi. The default pi username password of *raspberry*.:
+   From your local machine, ssh into the Raspberry Pi. Use the actual IP address assigned to the Pi. The default *pi* username password is *raspberry*:
 
    ```
-   ssh pi@<Assigned IP address of PI>
+   ssh pi@<Assigned IP address of Pi>
    ```
 
    Enable the VNC server via *raspi-config*:
@@ -75,11 +75,11 @@ The intent of this guide is to document a few additional steps that will facilit
 
    ![interface](images/ssh_raspi_config_vnc.png)
 
-   After enabling the VNC server, exit the raspi-config, and exit the SSH session.
+   After enabling the VNC server, exit the raspi-config, and exit the SSH session. The VNC server should be started and does not require a reboot of the Pi.
 
 8. Connect to the Raspberry Pi via a RealVNC Viewer/Client running on your local machine.
 
-   Use the assigned IP address to connect and the standard username *pi* and password *raspberry*. The default password can be changed in the next step.
+   Use the assigned IP address to connect and us the default username *pi* and password *raspberry*. The default password can be changed in the next step.
 
 9. Complete the Raspberry Pi OS installation and update.
    

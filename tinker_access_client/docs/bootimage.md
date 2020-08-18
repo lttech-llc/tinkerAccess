@@ -122,7 +122,7 @@ The intent of this guide is to document a few additional steps that will facilit
     sudo nano /boot/config.txt
     ```
 
-    Uncomment and modify the contents of the following lines to look like the following:
+    Uncomment and modify the contents of the following lines to look like the following. This will change the screen resolution to CEA mode, 1920x1080, 60Hz, 16:9 aspect ratio:
 
     ```
     # uncomment if hdmi display is not detected and composite is being output
@@ -133,5 +133,10 @@ The intent of this guide is to document a few additional steps that will facilit
     hdmi_mode=16
     ```
 
-    This will change the screen resolution to CEA mode, 1920x1080, 60HZ, 16:9 aspect ratio.
+    Reboot the Pi:
 
+    ```
+    sudo reboot
+    ```
+    
+#### The setup of the Raspberry Pi OS for the tinker-access-client is complete. You can continue with the rest of the client [prerequisites](prerequisites.md)

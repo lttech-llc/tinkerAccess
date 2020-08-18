@@ -29,13 +29,13 @@
 
    Ensure you have the latest version of [pip](https://pip.pypa.io/en/stable) and its related setuptools installed. If you do not complete this step, you will almost certainly __not__ have a good time. Version issues with PIP and its related setuptools can be inconsistent, confusing, and difficult to resolve. It is better to just avoid it now and ensure that they are updated. 
 
-   Many references that you can find, say to upgrade with the command 'sudo pip install --upgrade pip setuptools'. However, it is not advisable to upgrade the system version of pip with this method. It can create all sorts of issues if the system maintaner version is upgraded via this method. References to many of these issues described [here](https://github.com/pypa/pip/issues/5599)...
+   Many references that you can find, say to upgrade pip with the command 'pip install --upgrade pip setuptools'. However, it is not advisable to upgrade the system version of pip with this method. It can create all sorts of issues if the system maintaner version is upgraded via this method. References to many of these issues are described [here](https://github.com/pypa/pip/issues/5599).
 
-  The recommended upgrade process is shown below:
-  ```
-  sudo apt update
-  sudo apt install python-pip python-setuptools
+   The recommended upgrade process is shown below:
 
-  ```
+   ```
+   sudo apt update
+   sudo apt install python-pip python-setuptools
+   ```
 
-6. [Continue](/tinker_access_client/README.md)
+6. Continue with [client only install](/tinker_access_client/README.md) or [combined client/server install](/README.md).

@@ -6,15 +6,21 @@ There are many such guides that you can find, some with much more info, some wit
 
 The intent of this guide is to document a few additional steps that will facilitate the install in a completely headless mode (i.e., not requiring a monitor and keyboard). In order to do a completely headless setup, there needs to be a method to determine the IP address assigned to the Pi, external to the Pi. Access to the network router/DHCP server would typically be the desired method. If such a method is not available, then the initial stages of setup will need to use a monitor and keyboard, until the IP address can be determined and the SSH and/or VNC services enabled. After that, the setup can continue in a headless mode.
 
-1. Download the [Raspberry Pi OS image](https://www.raspberrypi.org/downloads/raspberry-pi-os/). The "Raspberry Pi OS (32-bit) with desktop" is the typical desired image. It is a somewhat light-weight image in that it does not include all of the recommended software of a full install, but it still includes the desktop.
+1. Download the [Raspberry Pi OS image](https://www.raspberrypi.org/downloads/raspberry-pi-os/).
 
-2. Write the image to an SD card, using your preferred method. The standard method is the [Raspberry Pi Imager](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
+   The "Raspberry Pi OS (32-bit) with desktop" is the typical desired image. It is a somewhat light-weight image in that it does not include all of the recommended software of a full install, but it still includes the desktop.
 
-#### Steps 3-8 are optional. If you do not want to begin the install in a completely headless mode, and are starting with a keyboard and monitor, you can install the SD card in the Pi, power it up, and continue the setup starting at step 9.
+2. Write the image to an SD card.
+
+   Using your preferred method, write the downloaded image to an SD card. The standard method is the [Raspberry Pi Imager](https://www.raspberrypi.org/documentation/installation/installing-images/README.md). Other methods are described in the link for various OSes.
+
+#### Steps 3-8 are optional. If you do not want to begin the install in a completely headless mode, and are starting with a keyboard and monitor, you can install the imaged SD card in the Pi, power it up, and continue the setup starting at step 9.
 
 3. Mount the *boot* partition of the SD card locally, so that you can add a couple of files to the root directory of the *boot* partition.
 
-4. [Enable SSH for a headless Pi](https://www.raspberrypi.org/documentation/remote-access/ssh/#:~:text=Enable%20SSH%20on%20a%20headless%20Raspberry%20Pi). Create an empty file named *ssh* at the root of the *boot* partition. This will automatically enable the SSH service when the Raspberry Pi boots up, which is normally disabled by default.
+4. [Enable SSH for a headless Pi](https://www.raspberrypi.org/documentation/remote-access/ssh/#:~:text=Enable%20SSH%20on%20a%20headless%20Raspberry%20Pi).
+
+   Create an empty file named *ssh* at the root of the *boot* partition. This will automatically enable the SSH service when the Raspberry Pi boots up, which is normally disabled by default.
 
    From the root directory of the locally mounted *boot* partition run the following command:
 
@@ -22,7 +28,9 @@ The intent of this guide is to document a few additional steps that will facilit
    sudo touch ssh
    ```
 
-5. [Setup WiFi for a headless Pi](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md). Create a file named *wpa_supplicant.conf* in the root directory of the *boot* partition that contains your WiFi credentials. On the initial boot, the Raspberry Pi will copy this file to the appropriate location and use it to connect to your WiFi network so that you can continue to configure it via SSH.
+5. [Setup WiFi for a headless Pi](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md).
+
+   Create a file named *wpa_supplicant.conf* in the root directory of the *boot* partition that contains your WiFi credentials. On the initial boot, the Raspberry Pi will copy this file to the appropriate location and use it to connect to your WiFi network so that you can continue to configure it via SSH.
 
    From the root directory of the locally mounted *boot* partition run the following command:
 
@@ -45,7 +53,7 @@ The intent of this guide is to document a few additional steps that will facilit
 
 6. Unmount the *boot* partition, remove the SD card, install it in the Raspberry Pi, and power it up.
 
-7. Connect to the Raspberry Pi via SSH, and enable the VNC server to complete the install via the desktop on a VNC client running locally.
+7. Enable the VNC server to facilitate completion of the install via the desktop on a VNC client running locally.
 
    From your local machine, ssh into the Raspberry Pi. Use the actual IP address assigned to the Pi. The default pi username password of *raspberry*.:
 
@@ -63,4 +71,15 @@ The intent of this guide is to document a few additional steps that will facilit
 
    ![interface](images/ssh_raspi_config_interface.png)
 
-   Next, select *VNC* from the raspi-config menu, and enable the VNC server.
+   Next, select *VNC* from the raspi-config menu, and then enable the VNC server.
+
+   ![interface](images/ssh_raspi_config_vnc.png)
+
+   After enabling the VNC server, exit the raspi-config, and exit the SSH session.
+
+8. Connect to the Raspberry Pi via a RealVNC Viewer/Client running on your local machine.
+
+   Use the assigned IP address to connect and the standard username *pi* and password *raspberry*. The default password can be changed in the next step.
+
+9. Complete the Raspberry Pi OS installation and update.
+   

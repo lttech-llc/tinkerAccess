@@ -69,11 +69,11 @@ The intent of this guide is to document a few additional steps that will facilit
 
    Select *Interfacing Options* from the raspi-config menu:
 
-   ![interface](images/ssh_raspi_config_interface.png)
+   ![raspi-config Interfacing Options](images/ssh_raspi_config_interface.png)
 
    Next, select *VNC* from the raspi-config menu, and then enable the VNC server.
 
-   ![interface](images/ssh_raspi_config_vnc.png)
+   ![raspi-config VNC](images/ssh_raspi_config_vnc.png)
 
    After enabling the VNC server, exit the raspi-config, and exit the SSH session. The VNC server should be started and does not require a reboot of the Pi.
 
@@ -83,3 +83,14 @@ The intent of this guide is to document a few additional steps that will facilit
 
 9. Complete the Raspberry Pi OS installation and update.
    
+10. Change the default screen resolution.
+
+    This step is optional, but should be completed if you want the default VNC screen resolution to be something larger when no monitor is connected. Edit the */boot/config.txt* file to change the default screen resolution. From a terminal window on the Pi run the following command:
+
+    ```
+    sudo nano /boot/config.txt
+    ```
+
+    Uncomment and modify the contents of the following lines to look like the following:
+
+    ```

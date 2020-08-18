@@ -139,4 +139,4 @@ The intent of this guide is to document a few additional steps that will facilit
     sudo reboot
     ```
     
-#### The setup of the Raspberry Pi OS for the tinker-access-client is complete. You can continue with the rest of the client [prerequisites](prerequisites.md)
+#### The setup of the Raspberry Pi OS boot image for the tinker-access-client is complete. You can continue with the rest of the client [prerequisites](prerequisites.md)

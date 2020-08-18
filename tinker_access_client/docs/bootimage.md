@@ -110,13 +110,13 @@ The intent of this guide is to document a few additional steps that will facilit
    sudo apt upgrade
    ```
 
-   After the update completes the following dialog with be displayed. If you want to change the default screen resolution when connected to the Pi via VNC without a monitor, do not reboot just yet, and click 'Later'. Complete step 10 before rebooting. Otherwise, if you do not want to change the default screen resolution go ahead and reboot the Pi by clicking 'Restart':
+   After the update completes the following dialog with be displayed. If you want to change the default screen resolution when connected to the Pi via VNC, without a monitor, do not reboot just yet, and click 'Later'. Complete step 10 before rebooting. Otherwise, if you do not want to change the default screen resolution, go ahead and reboot the Pi by clicking 'Restart':
 
    ![Installation Setup Complete](images/pi_setup_complete.png)
 
 10. Change the default screen resolution.
 
-    This step is optional, but should be completed if you want the default VNC screen resolution to be something larger when no monitor is connected. Edit the */boot/config.txt* file to change the default screen resolution. From a terminal window on the Pi run the following command:
+    This step is optional, but should be completed if you want the default VNC screen resolution to be something larger, when no monitor is connected. Edit the */boot/config.txt* file to change the default screen resolution. From a terminal window on the Pi run the following command:
 
     ```
     sudo nano /boot/config.txt
@@ -125,3 +125,13 @@ The intent of this guide is to document a few additional steps that will facilit
     Uncomment and modify the contents of the following lines to look like the following:
 
     ```
+    # uncomment if hdmi display is not detected and composite is being output
+    hdmi_force_hotplug=1
+    
+    # uncomment to force a specific HDMI mode (this will force VGA)
+    hdmi_group=1
+    hdmi_mode=16
+    ```
+
+    This will change the screen resolution to CEA mode, 1920x1080, 60HZ, 16:9 aspect ratio.
+

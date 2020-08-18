@@ -82,6 +82,32 @@ The intent of this guide is to document a few additional steps that will facilit
    Use the assigned IP address to connect and use the default username *pi* and password *raspberry*. The default password can be changed in the next step.
 
 9. Complete the Raspberry Pi OS installation and update.
+
+   After the initial boot, the following dialog box should be displayed to continue the installation process. Click 'Next' to continue the setup:
+
+   ![Installation Welcome](images/pi_welcome.png)
+
+   Set the Country and Timezone:
+
+   ![Installation Set Country](images/pi_set_country.png)
+
+   Change the default *pi* username password in this step:
+
+   ![Installation Change Password](images/pi_change_password.png)
+
+   Leave the fill entire screen checkbox unchecked:
+
+   ![Installation Set Up Screen](images/pi_set_up_screen.png)
+
+   Click 'Next' to download and update the OS. This will take awhile to complete:
+
+   ![Installation Update Software](images/pi_update_software.png)
+
+
+
+   
+
+
    
 10. Change the default screen resolution.
 

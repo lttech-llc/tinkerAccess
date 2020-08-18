@@ -10,7 +10,7 @@ The intent of this guide is to document a few additional steps that will facilit
 
 2. Write the image to an SD card, using your preferred method. The standard method is the [Raspberry Pi Imager](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
 
-#### Steps 3-8 are optional. If you do not want to start the install in a completely headless setup and are starting with a keyboard and monitor you can install the SD card in the Pi, power it up, and continue the setup starting at step 9.
+#### Steps 3-8 are optional. If you do not want to begin the install in a completely headless mode, and are starting with a keyboard and monitor, you can install the SD card in the Pi, power it up, and continue the setup starting at step 9.
 
 3. Mount the *boot* partition of the SD card locally, so that you can add a couple of files to the root directory of the *boot* partition.
 
@@ -24,42 +24,43 @@ The intent of this guide is to document a few additional steps that will facilit
 
 5. [Setup WiFi for a headless Pi](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md). Create a file named *wpa_supplicant.conf* in the root directory of the *boot* partition that contains your WiFi credentials. On the initial boot, the Raspberry Pi will copy this file to the appropriate location and use it to connect to your WiFi network so that you can continue to configure it via SSH.
 
-From the root directory of the locally mounted *boot* partition run the following command:
+   From the root directory of the locally mounted *boot* partition run the following command:
 
-```
-sudo nano wpa_supplicant.conf
-```
+   ```
+   sudo nano wpa_supplicant.conf
+   ```
 
-Paste the following contents into the file and save. Modify the SSID and password to match your actual WiFi access point credentials.
+   Paste the following contents into the file and save. Modify the SSID and password to match your actual WiFi access point credentials.
 
-```
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-country=US
+   ```
+   ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+   update_config=1
+   country=US
+   
+   network={
+    ssid="<Name of your wireless LAN>"
+    psk="<Password for your wireless LAN>"
+   }
+   ```
 
-network={
- ssid="<Name of your wireless LAN>"
- psk="<Password for your wireless LAN>"
-}
-```
-6. Unmount the *boot* partition, remove the SD card, install in the Raspberry Pi, and power it up.
+6. Unmount the *boot* partition, remove the SD card, install it in the Raspberry Pi, and power it up.
 
-7. Connect to the Raspberry Pi via SSH and enable the VNC server to complete the install via the desktop via a VNC client running locally.
+7. Connect to the Raspberry Pi via SSH, and enable the VNC server to complete the install via the desktop on a VNC client running locally.
 
-From your local machine, ssh into the Raspberry Pi. Use the actual IP address assigned to the Pi:
+   From your local machine, ssh into the Raspberry Pi. Use the actual IP address assigned to the Pi. The default pi username password of *raspberry*.:
 
-```
-ssh pi@<Assigned IP address of PI>
-```
+   ```
+   ssh pi@<Assigned IP address of PI>
+   ```
 
-The default pi username password of *raspberry*.
+   Enable the VNC server via *raspi-config*:
 
-Enable the VNC server via *raspi-config*:
+   ```
+   sudo raspi-config
+   ```
 
-```
-sudo raspi-config
-```
+   Select *Interfacing Options* from the raspi-config menu:
 
-Browse
+   ![interface](images/ssh_raspi_config_interface.png)
 
-![interface](/images/ssh_raspi_config_interface.png)
+   Next, select *VNC* from the raspi-config menu, and enable the VNC server.

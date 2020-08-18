@@ -15,23 +15,23 @@ The intent of this guide is to document a few additional steps that will facilit
 3. Mount the *boot* partition of the SD card locally, so that you can add a couple of files to the root directory of the *boot* partition.
 
 4. [Enable SSH for a headless Pi](https://www.raspberrypi.org/documentation/remote-access/ssh/#:~:text=Enable%20SSH%20on%20a%20headless%20Raspberry%20Pi). Create an empty file named *ssh* at the root of the *boot* partition. This will automatically enable the SSH service when the Raspberry Pi boots up, which is normally disabled by default.
-+
-From the root directory of the locally mounted *boot* partition run the following command:
-+
-```
-sudo touch ssh
-```
+
+   From the root directory of the locally mounted *boot* partition run the following command:
+
+   ```
+   sudo touch ssh
+   ```
 
 5. [Setup WiFi for a headless Pi](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md). Create a file named *wpa_supplicant.conf* in the root directory of the *boot* partition that contains your WiFi credentials. On the initial boot, the Raspberry Pi will copy this file to the appropriate location and use it to connect to your WiFi network so that you can continue to configure it via SSH.
-+
+
 From the root directory of the locally mounted *boot* partition run the following command:
-+
+
 ```
 sudo nano wpa_supplicant.conf
 ```
-+
+
 Paste the following contents into the file and save. Modify the SSID and password to match your actual WiFi access point credentials.
-+
+
 ```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1

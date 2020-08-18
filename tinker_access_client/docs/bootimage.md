@@ -22,7 +22,7 @@ The intent of this guide is to document a few additional steps that will facilit
 
    Create an empty file named *ssh* at the root of the *boot* partition. This will automatically enable the SSH service when the Raspberry Pi boots up, which is normally disabled by default.
 
-   From the root directory of the locally mounted *boot* partition run the following command:
+   From the root directory of the locally mounted *boot* partition, run the following command:
 
    ```
    sudo touch ssh
@@ -32,7 +32,7 @@ The intent of this guide is to document a few additional steps that will facilit
 
    Create a file named *wpa_supplicant.conf* in the root directory of the *boot* partition that contains your WiFi credentials. On the initial boot, the Raspberry Pi will copy this file to the appropriate location and use it to connect to your WiFi network so that you can continue to configure it via SSH.
 
-   From the root directory of the locally mounted *boot* partition run the following command:
+   From the root directory of the locally mounted *boot* partition, run the following command:
 
    ```
    sudo nano wpa_supplicant.conf
@@ -55,10 +55,10 @@ The intent of this guide is to document a few additional steps that will facilit
 
 7. Enable the VNC server to facilitate completion of the install via the desktop on a VNC client running locally.
 
-   From your local machine, ssh into the Raspberry Pi. Use the actual IP address assigned to the Pi. The default *pi* username password is *raspberry*:
+   From your local machine, ssh into the Raspberry Pi. Use the actual IP address assigned to the Pi. For the default *pi* username, the default password is *raspberry*:
 
    ```
-   ssh pi@<Assigned IP address of Pi>
+   ssh pi@<Assigned IP address of the Pi>
    ```
 
    Enable the VNC server via *raspi-config*:
@@ -77,9 +77,9 @@ The intent of this guide is to document a few additional steps that will facilit
 
    After enabling the VNC server, exit the raspi-config, and exit the SSH session. The VNC server should be started and does not require a reboot of the Pi.
 
-8. Connect to the Raspberry Pi via a RealVNC Viewer/Client running on your local machine.
+8. Connect to the Raspberry Pi via a RealVNC Viewer client running on your local machine.
 
-   Use the assigned IP address to connect and us the default username *pi* and password *raspberry*. The default password can be changed in the next step.
+   Use the assigned IP address to connect and use the default username *pi* and password *raspberry*. The default password can be changed in the next step.
 
 9. Complete the Raspberry Pi OS installation and update.
    

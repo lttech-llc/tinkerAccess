@@ -1,7 +1,7 @@
 # Prerequisites:
 1. Build the custom tinkerAccess [Raspberry Pi HAT](https://www.raspberrypi.org/blog/introducing-raspberry-pi-hats/) as described [here](/Hardware/).
 
-1. Create a [Raspbian OS](https://www.raspberrypi.org/downloads/raspbian/) boot image as described [here](docs/bootimage.md).
+1. Create a [Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspberry-pi-os/) boot image as described [here](/tinker_access_client/docs/bootimage.md).
 
 1. Transfer your SD card to the Raspberry Pi and boot it up.
 

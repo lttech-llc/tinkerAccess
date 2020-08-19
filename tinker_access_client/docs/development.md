@@ -2,9 +2,9 @@
 
 For development purposes, the client code can be installed from many different types of locations (i.e., the local file system and other [GitHub](https://github.com) branches). You can find additional examples [here](http://www.developerfiles.com/pip-install-from-local-git-repository/).
 
-You can use the [-e, --editable](https://pip.pypa.io/en/latest/reference/pip_install/#cmdoption-e) flag to install the package in editable mode. This will create a symlink from site_packages to your local development directory so you don't need to re-install each time you change a file.
+You can use the [-e, --editable](https://pip.pypa.io/en/latest/reference/pip_install/#cmdoption-e) flag to install the package in editable mode. This will create a symlink from dist-packages to your local development directory so you do not need to re-install each time you change a file.
 ```
-sudo pip install -e local_path/setup.py
+sudo pip install -e <path to your local development directory where setup.py resides>
 ```
 
 I generally do not do development on the Raspberry Pi. I setup a task to synchronize my files from my development machine and the Pi. PyCharm makes this easy with [deployment configuration](https://www.jetbrains.com/help/phpstorm/2016.3/deployment.html), but there are many other options to synchronize a directory with a remote directory.
@@ -44,7 +44,7 @@ sudo tinker-access-client start --debug
 
 ### Testing/Emulation:
 
-See the [testing](../tests/README.md) documentation for more info.
+See the [testing](/tinker_access_client/tests/README.md) documentation for more info.
 
 ### Logging:
 

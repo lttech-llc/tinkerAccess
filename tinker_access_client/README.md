@@ -46,6 +46,27 @@ less /var/log/tinker-access-client.log
 
 See the [development guide](docs/development.md) for special installation instructions, best practices and other helpful information for maintaining and enhancing the code for the future.
 
+## Upgrading the tinker-access-client:
+
+To upgrade to the latest version of the client, here are the commands that have worked for me:
+```
+sudo tinker-access-client stop
+sudo pip install --upgrade --force-reinstall --ignore-installed --no-cache-dir tinker-access-client --no-binary tinker-access-client
+sudo tinker-access-client --version
+sudo tinker-access-client status
+```
+
+## Downgrading the tinker-access-client:
+
+To downgrade to a previous version of the client, here are the commands that have worked for me. Replace the version number in the 'pip install' line with the actual desired version number:
+```
+sudo tinker-access-client stop
+sudo tinker-access-client remove
+sudo pip install --upgrade --force-reinstall --ignore-installed --no-cache-dir tinker-access-client==2020.6.28.24 --no-binary tinker-access-client
+sudo tinker-access-client --version
+sudo tinker-access-client status
+```
+
 ## Using the tinker-access-client command-line tools:
 The remaining information in this guide explains some ways to customize the behavior of the client, control the client, and/or get feedback about the state of the client.
 

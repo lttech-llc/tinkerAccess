@@ -58,7 +58,7 @@ The intent of this guide is to document a few additional steps that will facilit
    From your local machine, ssh into the Raspberry Pi. Use the actual IP address assigned to the Pi. For the default *pi* username, the default password is *raspberry*:
 
    ```
-   ssh pi@<Assigned IP address of the Pi>
+   ssh pi@192.168.20.90
    ```
 
    Enable the VNC server via *raspi-config*:

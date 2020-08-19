@@ -16,23 +16,35 @@ You will need to complete these [prerequisites](docs/prerequisites.md) before in
 By default, the tinker-access-client is installed as a service that starts immediately, as well as upon reboot of the device.
 
 Use the following command to get the latest version of the client:
-
 ```
 sudo pip install --upgrade --force-reinstall --ignore-installed --no-cache-dir tinker-access-client --no-binary tinker-access-client
 ```
 
-
-Query the client status. If all goes as planned, the expected output should be *'idle'*:
-
+Query the client status:
 ```
 sudo tinker-access-client status
 ```
 
-![status](docs/images/status.png)
+If the client successfully starts, then the expected status should be *'idle'*. However, the client service will likely not start up at first, and the returned status will be *'terminated'*. The reason for this is that the default client configuration settings will likely not work without some changes. Therefore a client configuration file needs to be added and modified. Get an example client config file directly from the GitHub repo, and then modify it:
+```
+sudo wget https://raw.githubusercontent.com/TinkerMill/tinkerAccess/master/tinker_access_client/config_file/tinker-access-client.conf -P /etc --backups=1
+sudo nano /etc/tinker-access-client.conf
+```
 
-If you didn't get the expected output, see the [troubleshooting guide](docs/troubleshooting.md).
+The example configuration file has the most commonly used options, many of which are commented out. The *Options* section below lists all of the possible options that can be set in the config file. The command line configuration options all start with --, but the equivalent config file name to be used in the config file is shown in square brackets [ ]. Modify the config file to match your tinker-access-client node wiring and setup, then save the file.
 
-See the [development guide](docs/development.md) for special installation instructions, best practices and other helpful information for maintaining & enhancing the code for the future.
+Start the client service again and recheck the status:
+```
+sudo tinker-access-client start
+sudo tinker-access-client status
+```
+
+If the client status still does not come back as *'idle'*, then check the log file to get an idea as to why the client service is not starting:
+```
+less /var/log/tinker-access-client.log
+```
+
+See the [development guide](docs/development.md) for special installation instructions, best practices and other helpful information for maintaining and enhancing the code for the future.
 
 ## Using the tinker-access-client command-line tools:
 The remaining information in this guide explains some ways to customize the behavior of the client, control the client, and/or get feedback about the state of the client.

@@ -1,9 +1,9 @@
 ### Development:
 
-For development purposes the The client code can be installed from many different types of locations (.i.e. the local file system and other [GitHub](https://github.com) branches), you can find additional examples [here](http://www.developerfiles.com/pip-install-from-local-git-repository/).
+For development purposes, the client code can be installed from many different types of locations (i.e., the local file system and other [GitHub](https://github.com) branches). You can find additional examples [here](http://www.developerfiles.com/pip-install-from-local-git-repository/).
 
 You can use the [-e, --editable ](https://pip.pypa.io/en/latest/reference/pip_install/#cmdoption-e) flag to install the package in editable mode. This will create a symlink from site_packages to your local development directory so you don't need to re-install each time you change a file.
-```commandline
+```
 sudo pip install -e local_path/setup.py
 ```
 
@@ -12,7 +12,7 @@ I generally don't do development on the Raspberry Pi, I setup a task to synchron
 Here are examples of my [connection](images/deployment_configuration_connection.png) & [mappings](images/deployment_configuration_mappings.png) configuration.
 
 After changing a local file, ssh into the Raspberry Pi and restart the client software to see your changes take affect.
-```commandline
+```
 sudo tinker-access-client restart
 ```
 

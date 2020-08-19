@@ -12,7 +12,7 @@ There are two main components to the system. If you intend to use the client and
 - [tinker-access-server](/tinker_access_server/README.md) 
 - [tinker-access-client](/tinker_access_client/README.md)
 
-If however, you intend to use both the server and client on the same physical device, then you can follow these simple instructions. You will however, need to complete these client [prerequisites](/tinker_access_client/docs/prerequisites.md) before running the install script. 
+If however, you intend to use both the server and client on the same physical device, then you can follow these simple instructions. You will need to complete these client [prerequisites](/tinker_access_client/docs/prerequisites.md) before running the install script. 
 
 From the Rasbian terminal:
 

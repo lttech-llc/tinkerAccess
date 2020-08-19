@@ -95,11 +95,11 @@ The intent of this guide is to document a few additional steps that will facilit
 
    ![Installation Change Password](images/pi_change_password.png)
 
-   Leave the fill entire screen checkbox unchecked:
+   Leave the 'fill entire screen' checkbox unchecked:
 
    ![Installation Set Up Screen](images/pi_set_up_screen.png)
 
-   Click 'Next' to download and install updates to the OS. This will take awhile to complete:
+   Click 'Next' to download and install updates to the OS. This will take a while to complete:
 
    ![Installation Update Software](images/pi_update_software.png)
 
@@ -110,7 +110,7 @@ The intent of this guide is to document a few additional steps that will facilit
    sudo apt upgrade
    ```
 
-   After the update completes the following dialog with be displayed. If you want to change the default screen resolution when connected to the Pi via VNC, without a monitor, do not reboot just yet, and click 'Later'. Complete step 10 before rebooting. Otherwise, if you do not want to change the default screen resolution, go ahead and reboot the Pi by clicking 'Restart':
+   After the update completes, the following dialog will be displayed. If you want to change the default screen resolution when connected to the Pi via VNC, without a monitor, do not reboot just yet, and click 'Later'. Complete step 10 before rebooting. Otherwise, if you do not want to change the default screen resolution, go ahead and reboot the Pi by clicking 'Restart':
 
    ![Installation Setup Complete](images/pi_setup_complete.png)
 

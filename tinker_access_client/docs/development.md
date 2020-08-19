@@ -18,7 +18,7 @@ sudo tinker-access-client restart
 
 ##### Run in stand-alone mode:
 
-When you install the client using [-e, --editable ](https://pip.pypa.io/en/latest/reference/pip_install/#cmdoption-e) option flag, the client will NOT install the service piece. You will get the command line support tools, but you will not automatically get the service piece. This means that any service related commands will not work (i.e., *sudo service tinker-acccess-client start*) and the client will not automatically start upon boot of the device.
+When you install the client using [-e, --editable ](https://pip.pypa.io/en/latest/reference/pip_install/#cmdoption-e) option flag, the client will NOT install the service piece. You will get the command line support tools, but you will not automatically get the service piece. This means that any service related commands will not work (i.e., *sudo service tinker-access-client start*) and the client will not automatically start upon boot of the device.
 
 If you really do want the service piece, you can create it with these commands, pointing the symlink to the same location that you installed your package from using the -e flag. Normally this is not required.
 ```
@@ -39,6 +39,7 @@ You can run the client as a stand alone script in the foreground if you do not w
 ```
 sudo tinker-access-client start --debug
 ```
+
 ![debug](images/debug_mode.png)
 
 ### Testing/Emulation:

@@ -7,14 +7,14 @@ The system was originally designed and created by Matt Stallard, Ron Thomas, and
 
 ### Install the tinkerAccess system
 
-There are two main components to the system. If you intend to use the client and server software on separate phyical devices, then you will want to review the individual documents regarding the installation, configuration, and operation of each respective piece.
+There are two main components to the system. If you intend to use the client and server software on separate physical devices, then you will want to review the individual documents regarding the installation, configuration, and operation of each respective piece.
 
 - [tinker-access-server](/tinker_access_server/README.md) 
 - [tinker-access-client](/tinker_access_client/README.md)
 
 If however, you intend to use both the server and client on the same physical device, then you can follow these simple instructions. You will need to complete these client [prerequisites](/tinker_access_client/docs/prerequisites.md) before running the install script. 
 
-From the Rasbian terminal:
+From the Pi terminal:
 
 ```
 git clone https://github.com/TinkerMill/tinkerAccess.git
@@ -25,13 +25,13 @@ sudo bash install.sh
 After running the installation script, the configuration files for both the server and client are created, but they 
 need to be modified for a proper setup, before rebooting or restarting the services to take effect.
 
-Edit the server configuation file:
+Edit the server configuration file:
 
 ```
 sudo nano /opt/tinkeraccess/server.cfg
 ```
 
-Edit the client configuation file:
+Edit the client configuration file:
 
 ```
 sudo nano /etc/tinker-access-client.conf

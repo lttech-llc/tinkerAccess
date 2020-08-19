@@ -23,7 +23,6 @@ The intent of this guide is to document a few additional steps that will facilit
    Create an empty file named *ssh* at the root of the *boot* partition. This will automatically enable the SSH service when the Raspberry Pi boots up, which is normally disabled by default.
 
    From the root directory of the locally mounted *boot* partition, run the following command:
-
    ```
    sudo touch ssh
    ```
@@ -33,13 +32,11 @@ The intent of this guide is to document a few additional steps that will facilit
    Create a file named *wpa_supplicant.conf* in the root directory of the *boot* partition that contains your WiFi credentials. On the initial boot, the Raspberry Pi will copy this file to the appropriate location and use it to connect to your WiFi network so that you can continue to configure it via SSH.
 
    From the root directory of the locally mounted *boot* partition, run the following command:
-
    ```
    sudo nano wpa_supplicant.conf
    ```
 
    Paste the following contents into the file and save. Modify the SSID and password to match your actual WiFi access point credentials.
-
    ```
    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
    update_config=1
@@ -56,13 +53,11 @@ The intent of this guide is to document a few additional steps that will facilit
 7. Enable the VNC server to facilitate completion of the install via the desktop on a VNC client running locally.
 
    From your local machine, ssh into the Raspberry Pi. Use the actual IP address assigned to the Pi. For the default *pi* username, the default password is *raspberry*:
-
    ```
    ssh pi@192.168.20.90
    ```
 
    Enable the VNC server via *raspi-config*:
-
    ```
    sudo raspi-config
    ```
@@ -104,7 +99,6 @@ The intent of this guide is to document a few additional steps that will facilit
    ![Installation Update Software](images/pi_update_software.png)
 
    If the download and update fails for any reason, the update can be completed at the command line with the following commands:
-
    ```
    sudo apt update
    sudo apt upgrade
@@ -117,13 +111,11 @@ The intent of this guide is to document a few additional steps that will facilit
 10. Change the default screen resolution.
 
     This step is optional, but should be completed if you want the default VNC screen resolution to be something larger, when no monitor is connected. Edit the */boot/config.txt* file to change the default screen resolution. From a terminal window on the Pi, run the following command:
-
     ```
     sudo nano /boot/config.txt
     ```
 
     Uncomment and modify the contents of the following lines to look like the following. This will change the screen resolution to CEA mode, 1920x1080, 60Hz, 16:9 aspect ratio:
-
     ```
     # uncomment if hdmi display is not detected and composite is being output
     hdmi_force_hotplug=1
@@ -134,7 +126,6 @@ The intent of this guide is to document a few additional steps that will facilit
     ```
 
     Reboot the Pi:
-
     ```
     sudo reboot
     ```

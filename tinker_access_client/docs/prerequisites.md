@@ -32,7 +32,6 @@
    Many references that you can find, say to upgrade pip with the command 'pip install --upgrade pip setuptools'. However, it is not advisable to upgrade the system version of pip with this method. It can create all sorts of issues if the system maintainer version is upgraded via this method. References to many of these issues are described [here](https://github.com/pypa/pip/issues/5599).
 
    The recommended upgrade process is shown below:
-
    ```
    sudo apt update
    sudo apt install python-pip python-setuptools

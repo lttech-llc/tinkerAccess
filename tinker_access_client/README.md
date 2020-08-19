@@ -4,7 +4,7 @@ The tinker-access-client is the client piece of the tinkerAccess system, a [Rasp
 
 The system was originally designed and created by [Matt Stallard](https://github.com/mstallard), [Ron Thomas](https://github.com/RonaldThomas), and [Matt Peopping](https://github.com/analogpixel) for [TinkerMill](http://www.tinkermill.org) a makerspace in [Longmont, CO](https://www.google.com/maps/place/Longmont,+CO/@40.1679379,-105.1678944,12z/data=!3m1!4b1!4m5!3m4!1s0x876bf908d5cc3349:0xc17da1eef3a32735!8m2!3d40.1672068!4d-105.1019275). It is continually being maintained and enhanced by other contributors in the community.
 
-The client software is a [Python 2.7](https://www.python.org/download/releases/2.7/) service designed to run on the [Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspberry-pi-os/). The service is responsible for coordinating activity between the RPi's peripherals (i.e. RFID reader, LCD, etc.) and the GPIO, as well as communicating with the [tinker-access-server](/tinker_access_server/README.md) for activity logging, authentication, and authorization.
+The client software is a [Python 2.7](https://www.python.org/download/releases/2.7/) service designed to run on the [Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspberry-pi-os/). The service is responsible for coordinating activity between the RPi's peripherals (i.e., RFID reader, LCD, etc.) and the GPIO, as well as communicating with the [tinker-access-server](/tinker_access_server/README.md) for activity logging, authentication, and authorization.
 
 Official releases of the client software are packaged and published to [PyPI - the Python Package Index ](https://pypi.python.org/pypi/tinker-access-client/)  
 
@@ -55,7 +55,6 @@ sudo tinker-access-client --help
 ```
 
 #### Usage:
-
 ```
 sudo tinker-access-client <command> [options]
 ```
@@ -69,11 +68,10 @@ sudo tinker-access-client <command> [options]
 
 - __update__ : This command will update the tinker-access-client from the [PyPI - the Python Package Index ](https://pypi.python.org/pypi/tinker-access-client/).  
 
-  By default the latest published version will be installed.
-	 Optionally a second argument can be provided to specify the specific version desired.
-   ```
-	 sudo tinker-access-client update 2017.2.14.441
-   ```
+  By default, the latest published version will be installed. Optionally, a second argument can be provided to specify the specific version desired.
+  ```
+  sudo tinker-access-client update 2017.2.14.441
+  ```
 
 - __remove__ : This command will stop the tinker-access-client process, remove the service and all other artifacts installed via PIP.  
 
@@ -168,4 +166,4 @@ auto_update: true
 
 - __--display-serlcd=[display_serlcd]__: Send commands for the SparkFun LCD-14072 SerLCD display if true, otherwise send commands for the original backpack style display [default:'False']
 
-- __--allow-user-override=[allow_user_override]__: Allows a new user to login and takover the current user login session [default:'False']
+- __--allow-user-override=[allow_user_override]__: Allows a new user to login and takeover the current user login session [default:'False']

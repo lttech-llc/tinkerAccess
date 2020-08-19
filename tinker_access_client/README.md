@@ -17,14 +17,14 @@ By default, the tinker-access-client is installed as a service that starts immed
 
 Use the following command to get the latest version of the client:
 
-```commandline
+```
 sudo pip install --upgrade --force-reinstall --ignore-installed --no-cache-dir tinker-access-client --no-binary tinker-access-client
 ```
 
 
 Query the client status. If all goes as planned, the expected output should be *'idle'*:
 
-```commandline
+```
 sudo tinker-access-client status
 ```
 

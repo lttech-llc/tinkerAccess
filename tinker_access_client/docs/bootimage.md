@@ -2,7 +2,7 @@
 
 This document details the steps required to create a [Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspberry-pi-os/) boot image and prepare it for the tinker-access-client.
 
-There are many such guides that you can find, some with much more info, some with much less. I will let you pick your own poison, but its hard to beat [this guide](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
+There are many such guides that you can find, some with much more info, some with much less. I will let you pick your own poison, but it is hard to beat [this guide](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
 
 The intent of this guide is to document a few additional steps that will facilitate the install in a completely headless mode (i.e., not requiring a monitor and keyboard). In order to do a completely headless setup, there needs to be a method to determine the IP address assigned to the Pi, external to the Pi. Access to the network router/DHCP server would typically be the desired method. If such a method is not available, then the initial stages of setup will need to use a monitor and keyboard, until the IP address can be determined and the SSH and/or VNC services enabled. After that, the setup can continue in a headless mode.
 
@@ -116,7 +116,7 @@ The intent of this guide is to document a few additional steps that will facilit
 
 10. Change the default screen resolution.
 
-    This step is optional, but should be completed if you want the default VNC screen resolution to be something larger, when no monitor is connected. Edit the */boot/config.txt* file to change the default screen resolution. From a terminal window on the Pi run the following command:
+    This step is optional, but should be completed if you want the default VNC screen resolution to be something larger, when no monitor is connected. Edit the */boot/config.txt* file to change the default screen resolution. From a terminal window on the Pi, run the following command:
 
     ```
     sudo nano /boot/config.txt
